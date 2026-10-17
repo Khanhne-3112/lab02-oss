@@ -24,14 +24,30 @@ bash lab.sh extend
 
 `test` kiểm tra phần mẫu; `extend` kiểm tra phần tự làm. Các vị trí TODO là nhiệm vụ cần hoàn thiện; không sửa test để bỏ qua lỗi.
 
-Kết quả mở rộng cần đạt: `TESTS=8 FAILED=0`. Có lớp kiểm tra sức chứa, chương trình gọi lớp và lớp mở rộng trả confirmed, waiting hoặc rejected theo quy tắc đã công bố.
+Kết quả mở rộng cần đạt: `TESTS=9 FAILED=0`. Có lớp kiểm tra sức chứa, chương trình gọi lớp và lớp mở rộng trả confirmed, waiting hoặc rejected theo quy tắc đã công bố.
 
 ## Tệp nộp
 
 Giữ mã nguồn, dữ liệu mẫu và kiểm thử. Ghi lại lệnh chạy trong README. Không đưa `.local`, mật khẩu hoặc dữ liệu cá nhân thật vào kho mã và gói nộp. Nộp đúng commit theo yêu cầu của bài; nếu dùng Actions, đính kèm lần chạy tương ứng.
 
-## Cach chay Lab 02
+## Cách chạy Lab 02
+
+```bash
 bash lab.sh check
 bash lab.sh run
 bash lab.sh test
 bash lab.sh extend
+```
+## Bảng kiểm thử bước 5
+
+| Đầu vào (sức chứa, đã đăng ký) | Yêu cầu | Thực tế |
+|---|---|---|
+| (10, 9) | AVAILABLE | AVAILABLE |
+| (10, 10) | FULL | FULL |
+| (10, 11) | FULL | FULL |
+| (0, 0) | FULL | FULL |
+| (10, -1) | FULL | FULL |
+
+## Ca kiểm thử tự thêm
+
+`closed-full-waiting`: sự kiện đóng, đã đầy và có danh sách chờ thì phải trả `rejected`, không phải `waiting`. Ca này kiểm tra việc xét trạng thái đóng được ưu tiên trước danh sách chờ.
