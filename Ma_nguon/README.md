@@ -29,3 +29,9 @@ Kết quả mở rộng cần đạt: `TESTS=8 FAILED=0`. Có lớp kiểm tra s
 ## Tệp nộp
 
 Giữ mã nguồn, dữ liệu mẫu và kiểm thử. Ghi lại lệnh chạy trong README. Không đưa `.local`, mật khẩu hoặc dữ liệu cá nhân thật vào kho mã và gói nộp. Nộp đúng commit theo yêu cầu của bài; nếu dùng Actions, đính kèm lần chạy tương ứng.
+
+## Cach chay Lab 02
+bash lab.sh check
+bash lab.sh run
+bash lab.sh test
+bash lab.sh extend

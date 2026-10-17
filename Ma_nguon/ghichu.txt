@@ -1,0 +1,13 @@
+Quy tac kiem tra dang ky:
+1. Suc chua phai lon hon 0.
+2. So nguoi da dang ky khong duoc am.
+3. Chi con cho khi so da dang ky NHO HON suc chua (dung dau <, khong dung <=).
+4. Neu so da dang ky lon hon suc chua thi cung khong cho dang ky tiep.
+
+Bang thu dau vao:
+Dau vao   | Ket qua yeu cau | Ket qua thuc te
+(10, 9)   | AVAILABLE       | AVAILABLE
+(10, 10)  | FULL            | FULL
+(10, 11)  | FULL            | FULL
+(0, 0)    | FULL            | FULL
+(10, -1)  | FULL            | FULL
